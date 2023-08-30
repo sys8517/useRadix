@@ -1,0 +1,62 @@
+.input_custom {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+}
+
+.item_input_custom {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.theme_day {
+  background-color: rgb(236, 236, 236);
+}
+
+.theme_night {
+  background-color: rgb(76, 84, 105);
+  color: #fff;
+}
+
+.wrap_div_day {
+  background-color: #fff;
+}
+
+.wrap_div_night {
+  background-color: rgb(76, 84, 105);
+  color: #fff;
+}
+
+.bottom_box {
+  border: 1px solid #bdbdbd;
+}
+
+.screen_out {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+}
+
+@media print {
+  .icon_print {
+    display: none;
+  }
+  .bottom_box {
+    padding: 20px;
+  }
+  .print {
+    gap: 20px;
+  }
+  @page {
+    size: A4 portrait;
+    /* margin: 0; */
+  }
+}
