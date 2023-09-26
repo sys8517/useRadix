@@ -6,3 +6,52 @@
   background-color: rgb(70, 87, 122);
   color: white;
 }
+
+.header_switch span[data-state="checked"]::before {
+}
+
+.header_switch > button {
+  width: 60px;
+}
+.header_switch > button > span[data-state="checked"] {
+  transform: translateX(32px);
+}
+.day,
+.night {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+.day::before {
+  position: absolute;
+  // content: "★";
+  content: "";
+  background-image: url("/sun.svg");
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
+  top: 0px;
+  right: 125px;
+  z-index: 99;
+  color: white;
+}
+
+.night::before {
+  position: absolute;
+  content: "";
+  background-image: url("/moon.svg");
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
+  top: 3px;
+  right: 96px;
+  z-index: 99;
+}
+
+.rt-SwitchButton::before {
+  width: 60px;
+}
+
+.rt-SwitchThumb {
+}

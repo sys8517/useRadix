@@ -1,8 +1,7 @@
 "use client";
-import { Flex, Box, Text, IconButton, Switch, Theme } from "@radix-ui/themes";
+import { Flex, Text, IconButton, Switch, Theme } from "@radix-ui/themes";
 import styles from "./Header.module.scss";
 import { useRouter } from "next/navigation";
-import { useState } from "react";
 import { useRecoilState } from "recoil";
 import { themeRecoil } from "@/recoil/ThemeRecoil";
 
@@ -44,8 +43,10 @@ export default function Header() {
         <Text>Make Your Survey</Text>
         <Flex>
           <Text size="2">
-            <label>
+            <label className={`${theme === true ? styles.day : styles.night}`}>
               <Switch
+                size={"3"}
+                className={`${styles.header_switch} `}
                 mr="2"
                 defaultChecked={theme}
                 onCheckedChange={(e) => {

@@ -1,27 +1,15 @@
 "use client";
 import "./globals.css";
-import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "@radix-ui/themes/styles.css";
-import { Theme, ThemePanel } from "@radix-ui/themes";
 import Header from "@/component/Header";
-
 import React from "react";
 import { RecoilRoot } from "recoil";
-import { themeRecoil } from "@/recoil/ThemeRecoil";
+
+import "@radix-ui/themes/styles.css";
+import { Theme } from "@radix-ui/themes";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata: Metadata = {
-  title: "...",
-};
-
-// or Dynamic metadata
-// export async function generateMetadata({ params }) {
-//   return {
-//     title: '...',
-//   }
-// }
 export default function RootLayout({
   children,
 }: {
@@ -39,7 +27,6 @@ export default function RootLayout({
           >
             <Header />
             {children}
-            {/* <ThemePanel /> */}
           </Theme>
         </RecoilRoot>
       </body>
